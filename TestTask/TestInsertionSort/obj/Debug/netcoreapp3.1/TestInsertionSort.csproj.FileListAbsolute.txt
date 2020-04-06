@@ -1,0 +1,24 @@
+D:\ETU\Term 8\Programming via .NET\TestTask\TestTask\TestInsertionSort\bin\Debug\netcoreapp3.1\TestInsertionSort.exe
+D:\ETU\Term 8\Programming via .NET\TestTask\TestTask\TestInsertionSort\bin\Debug\netcoreapp3.1\TestInsertionSort.deps.json
+D:\ETU\Term 8\Programming via .NET\TestTask\TestTask\TestInsertionSort\bin\Debug\netcoreapp3.1\TestInsertionSort.runtimeconfig.json
+D:\ETU\Term 8\Programming via .NET\TestTask\TestTask\TestInsertionSort\bin\Debug\netcoreapp3.1\TestInsertionSort.runtimeconfig.dev.json
+D:\ETU\Term 8\Programming via .NET\TestTask\TestTask\TestInsertionSort\bin\Debug\netcoreapp3.1\TestInsertionSort.dll
+D:\ETU\Term 8\Programming via .NET\TestTask\TestTask\TestInsertionSort\bin\Debug\netcoreapp3.1\TestInsertionSort.pdb
+D:\ETU\Term 8\Programming via .NET\TestTask\TestTask\TestInsertionSort\obj\Debug\netcoreapp3.1\TestInsertionSort.csprojAssemblyReference.cache
+D:\ETU\Term 8\Programming via .NET\TestTask\TestTask\TestInsertionSort\obj\Debug\netcoreapp3.1\TestInsertionSort.AssemblyInfoInputs.cache
+D:\ETU\Term 8\Programming via .NET\TestTask\TestTask\TestInsertionSort\obj\Debug\netcoreapp3.1\TestInsertionSort.AssemblyInfo.cs
+D:\ETU\Term 8\Programming via .NET\TestTask\TestTask\TestInsertionSort\obj\Debug\netcoreapp3.1\TestInsertionSort.dll
+D:\ETU\Term 8\Programming via .NET\TestTask\TestTask\TestInsertionSort\obj\Debug\netcoreapp3.1\TestInsertionSort.pdb
+D:\ETU\Term 8\net-webapi-ETU\TestTask\TestInsertionSort\bin\Debug\netcoreapp3.1\TestInsertionSort.exe
+D:\ETU\Term 8\net-webapi-ETU\TestTask\TestInsertionSort\bin\Debug\netcoreapp3.1\TestInsertionSort.deps.json
+D:\ETU\Term 8\net-webapi-ETU\TestTask\TestInsertionSort\bin\Debug\netcoreapp3.1\TestInsertionSort.runtimeconfig.json
+D:\ETU\Term 8\net-webapi-ETU\TestTask\TestInsertionSort\bin\Debug\netcoreapp3.1\TestInsertionSort.runtimeconfig.dev.json
+D:\ETU\Term 8\net-webapi-ETU\TestTask\TestInsertionSort\bin\Debug\netcoreapp3.1\TestInsertionSort.dll
+D:\ETU\Term 8\net-webapi-ETU\TestTask\TestInsertionSort\bin\Debug\netcoreapp3.1\TestInsertionSort.pdb
+D:\ETU\Term 8\net-webapi-ETU\TestTask\TestInsertionSort\obj\Debug\netcoreapp3.1\TestInsertionSort.csprojAssemblyReference.cache
+D:\ETU\Term 8\net-webapi-ETU\TestTask\TestInsertionSort\obj\Debug\netcoreapp3.1\TestInsertionSort.csproj.CoreCompileInputs.cache
+D:\ETU\Term 8\net-webapi-ETU\TestTask\TestInsertionSort\obj\Debug\netcoreapp3.1\TestInsertionSort.AssemblyInfoInputs.cache
+D:\ETU\Term 8\net-webapi-ETU\TestTask\TestInsertionSort\obj\Debug\netcoreapp3.1\TestInsertionSort.AssemblyInfo.cs
+D:\ETU\Term 8\net-webapi-ETU\TestTask\TestInsertionSort\obj\Debug\netcoreapp3.1\TestInsertionSort.dll
+D:\ETU\Term 8\net-webapi-ETU\TestTask\TestInsertionSort\obj\Debug\netcoreapp3.1\TestInsertionSort.pdb
+D:\ETU\Term 8\net-webapi-ETU\TestTask\TestInsertionSort\obj\Debug\netcoreapp3.1\TestInsertionSort.genruntimeconfig.cache

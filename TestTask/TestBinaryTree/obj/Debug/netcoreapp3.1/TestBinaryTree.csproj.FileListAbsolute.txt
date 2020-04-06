@@ -1,0 +1,24 @@
+D:\ETU\Term 8\Programming via .NET\TestTask\TestTask\TestBinaryTree\bin\Debug\netcoreapp3.1\TestBinaryTree.exe
+D:\ETU\Term 8\Programming via .NET\TestTask\TestTask\TestBinaryTree\bin\Debug\netcoreapp3.1\TestBinaryTree.deps.json
+D:\ETU\Term 8\Programming via .NET\TestTask\TestTask\TestBinaryTree\bin\Debug\netcoreapp3.1\TestBinaryTree.runtimeconfig.json
+D:\ETU\Term 8\Programming via .NET\TestTask\TestTask\TestBinaryTree\bin\Debug\netcoreapp3.1\TestBinaryTree.runtimeconfig.dev.json
+D:\ETU\Term 8\Programming via .NET\TestTask\TestTask\TestBinaryTree\bin\Debug\netcoreapp3.1\TestBinaryTree.dll
+D:\ETU\Term 8\Programming via .NET\TestTask\TestTask\TestBinaryTree\bin\Debug\netcoreapp3.1\TestBinaryTree.pdb
+D:\ETU\Term 8\Programming via .NET\TestTask\TestTask\TestBinaryTree\obj\Debug\netcoreapp3.1\TestBinaryTree.csprojAssemblyReference.cache
+D:\ETU\Term 8\Programming via .NET\TestTask\TestTask\TestBinaryTree\obj\Debug\netcoreapp3.1\TestBinaryTree.AssemblyInfoInputs.cache
+D:\ETU\Term 8\Programming via .NET\TestTask\TestTask\TestBinaryTree\obj\Debug\netcoreapp3.1\TestBinaryTree.AssemblyInfo.cs
+D:\ETU\Term 8\Programming via .NET\TestTask\TestTask\TestBinaryTree\obj\Debug\netcoreapp3.1\TestBinaryTree.dll
+D:\ETU\Term 8\Programming via .NET\TestTask\TestTask\TestBinaryTree\obj\Debug\netcoreapp3.1\TestBinaryTree.pdb
+D:\ETU\Term 8\net-webapi-ETU\TestTask\TestBinaryTree\bin\Debug\netcoreapp3.1\TestBinaryTree.exe
+D:\ETU\Term 8\net-webapi-ETU\TestTask\TestBinaryTree\bin\Debug\netcoreapp3.1\TestBinaryTree.deps.json
+D:\ETU\Term 8\net-webapi-ETU\TestTask\TestBinaryTree\bin\Debug\netcoreapp3.1\TestBinaryTree.runtimeconfig.json
+D:\ETU\Term 8\net-webapi-ETU\TestTask\TestBinaryTree\bin\Debug\netcoreapp3.1\TestBinaryTree.runtimeconfig.dev.json
+D:\ETU\Term 8\net-webapi-ETU\TestTask\TestBinaryTree\bin\Debug\netcoreapp3.1\TestBinaryTree.dll
+D:\ETU\Term 8\net-webapi-ETU\TestTask\TestBinaryTree\bin\Debug\netcoreapp3.1\TestBinaryTree.pdb
+D:\ETU\Term 8\net-webapi-ETU\TestTask\TestBinaryTree\obj\Debug\netcoreapp3.1\TestBinaryTree.csprojAssemblyReference.cache
+D:\ETU\Term 8\net-webapi-ETU\TestTask\TestBinaryTree\obj\Debug\netcoreapp3.1\TestBinaryTree.csproj.CoreCompileInputs.cache
+D:\ETU\Term 8\net-webapi-ETU\TestTask\TestBinaryTree\obj\Debug\netcoreapp3.1\TestBinaryTree.AssemblyInfoInputs.cache
+D:\ETU\Term 8\net-webapi-ETU\TestTask\TestBinaryTree\obj\Debug\netcoreapp3.1\TestBinaryTree.AssemblyInfo.cs
+D:\ETU\Term 8\net-webapi-ETU\TestTask\TestBinaryTree\obj\Debug\netcoreapp3.1\TestBinaryTree.dll
+D:\ETU\Term 8\net-webapi-ETU\TestTask\TestBinaryTree\obj\Debug\netcoreapp3.1\TestBinaryTree.pdb
+D:\ETU\Term 8\net-webapi-ETU\TestTask\TestBinaryTree\obj\Debug\netcoreapp3.1\TestBinaryTree.genruntimeconfig.cache

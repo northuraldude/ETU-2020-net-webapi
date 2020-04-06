@@ -1,0 +1,24 @@
+D:\ETU\Term 8\Programming via .NET\TestTask\TestTask\TestLinkedList\bin\Debug\netcoreapp3.1\TestLinkedList.exe
+D:\ETU\Term 8\Programming via .NET\TestTask\TestTask\TestLinkedList\bin\Debug\netcoreapp3.1\TestLinkedList.deps.json
+D:\ETU\Term 8\Programming via .NET\TestTask\TestTask\TestLinkedList\bin\Debug\netcoreapp3.1\TestLinkedList.runtimeconfig.json
+D:\ETU\Term 8\Programming via .NET\TestTask\TestTask\TestLinkedList\bin\Debug\netcoreapp3.1\TestLinkedList.runtimeconfig.dev.json
+D:\ETU\Term 8\Programming via .NET\TestTask\TestTask\TestLinkedList\bin\Debug\netcoreapp3.1\TestLinkedList.dll
+D:\ETU\Term 8\Programming via .NET\TestTask\TestTask\TestLinkedList\bin\Debug\netcoreapp3.1\TestLinkedList.pdb
+D:\ETU\Term 8\Programming via .NET\TestTask\TestTask\TestLinkedList\obj\Debug\netcoreapp3.1\TestLinkedList.csprojAssemblyReference.cache
+D:\ETU\Term 8\Programming via .NET\TestTask\TestTask\TestLinkedList\obj\Debug\netcoreapp3.1\TestLinkedList.AssemblyInfoInputs.cache
+D:\ETU\Term 8\Programming via .NET\TestTask\TestTask\TestLinkedList\obj\Debug\netcoreapp3.1\TestLinkedList.AssemblyInfo.cs
+D:\ETU\Term 8\Programming via .NET\TestTask\TestTask\TestLinkedList\obj\Debug\netcoreapp3.1\TestLinkedList.dll
+D:\ETU\Term 8\Programming via .NET\TestTask\TestTask\TestLinkedList\obj\Debug\netcoreapp3.1\TestLinkedList.pdb
+D:\ETU\Term 8\net-webapi-ETU\TestTask\TestLinkedList\bin\Debug\netcoreapp3.1\TestLinkedList.exe
+D:\ETU\Term 8\net-webapi-ETU\TestTask\TestLinkedList\bin\Debug\netcoreapp3.1\TestLinkedList.deps.json
+D:\ETU\Term 8\net-webapi-ETU\TestTask\TestLinkedList\bin\Debug\netcoreapp3.1\TestLinkedList.runtimeconfig.json
+D:\ETU\Term 8\net-webapi-ETU\TestTask\TestLinkedList\bin\Debug\netcoreapp3.1\TestLinkedList.runtimeconfig.dev.json
+D:\ETU\Term 8\net-webapi-ETU\TestTask\TestLinkedList\bin\Debug\netcoreapp3.1\TestLinkedList.dll
+D:\ETU\Term 8\net-webapi-ETU\TestTask\TestLinkedList\bin\Debug\netcoreapp3.1\TestLinkedList.pdb
+D:\ETU\Term 8\net-webapi-ETU\TestTask\TestLinkedList\obj\Debug\netcoreapp3.1\TestLinkedList.csprojAssemblyReference.cache
+D:\ETU\Term 8\net-webapi-ETU\TestTask\TestLinkedList\obj\Debug\netcoreapp3.1\TestLinkedList.csproj.CoreCompileInputs.cache
+D:\ETU\Term 8\net-webapi-ETU\TestTask\TestLinkedList\obj\Debug\netcoreapp3.1\TestLinkedList.AssemblyInfoInputs.cache
+D:\ETU\Term 8\net-webapi-ETU\TestTask\TestLinkedList\obj\Debug\netcoreapp3.1\TestLinkedList.AssemblyInfo.cs
+D:\ETU\Term 8\net-webapi-ETU\TestTask\TestLinkedList\obj\Debug\netcoreapp3.1\TestLinkedList.dll
+D:\ETU\Term 8\net-webapi-ETU\TestTask\TestLinkedList\obj\Debug\netcoreapp3.1\TestLinkedList.pdb
+D:\ETU\Term 8\net-webapi-ETU\TestTask\TestLinkedList\obj\Debug\netcoreapp3.1\TestLinkedList.genruntimeconfig.cache
