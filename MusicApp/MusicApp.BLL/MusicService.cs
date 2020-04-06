@@ -19,6 +19,7 @@ namespace MusicApp.BLL
         {
             await _unitOfWork.Musics.AddAsync(newMusic);
             await _unitOfWork.CommitAsync();
+            
             return newMusic;
         }
 
@@ -41,12 +42,14 @@ namespace MusicApp.BLL
         {
             musicToBeUpdated.Name = music.Name;
             musicToBeUpdated.ArtistId = music.ArtistId;
+            
             await _unitOfWork.CommitAsync();
         }
         
         public async Task DeleteMusic(Music music)
         {
             _unitOfWork.Musics.Remove(music);
+            
             await _unitOfWork.CommitAsync();
         }
     }

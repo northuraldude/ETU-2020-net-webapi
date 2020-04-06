@@ -18,6 +18,8 @@ namespace MusicApp.BLL
         public async Task<Artist> CreateArtist(Artist newArtist)
         {
             await _unitOfWork.Artists.AddAsync(newArtist);
+            await _unitOfWork.CommitAsync();
+            
             return newArtist;
         }
         
@@ -34,12 +36,14 @@ namespace MusicApp.BLL
         public async Task UpdateArtist(Artist artistToBeUpdated, Artist artist)
         {
             artistToBeUpdated.Name = artist.Name;
+            
             await _unitOfWork.CommitAsync();
         }
         
         public async Task DeleteArtist(Artist artist)
         {
             _unitOfWork.Artists.Remove(artist);
+            
             await _unitOfWork.CommitAsync();
         }
     }

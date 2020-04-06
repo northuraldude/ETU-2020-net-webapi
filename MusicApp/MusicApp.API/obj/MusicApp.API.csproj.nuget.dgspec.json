@@ -1,0 +1,289 @@
+{
+  "format": 1,
+  "restore": {
+    "D:\\ETU\\Term 8\\net-webapi-ETU\\MusicApp\\MusicApp.API\\MusicApp.API.csproj": {}
+  },
+  "projects": {
+    "D:\\ETU\\Term 8\\net-webapi-ETU\\MusicApp\\MusicApp.API\\MusicApp.API.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\ETU\\Term 8\\net-webapi-ETU\\MusicApp\\MusicApp.API\\MusicApp.API.csproj",
+        "projectName": "MusicApp.API",
+        "projectPath": "D:\\ETU\\Term 8\\net-webapi-ETU\\MusicApp\\MusicApp.API\\MusicApp.API.csproj",
+        "packagesPath": "C:\\Users\\squee\\.nuget\\packages\\",
+        "outputPath": "D:\\ETU\\Term 8\\net-webapi-ETU\\MusicApp\\MusicApp.API\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\squee\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "projectReferences": {
+              "D:\\ETU\\Term 8\\net-webapi-ETU\\MusicApp\\MusicApp.BLL\\MusicApp.BLL.csproj": {
+                "projectPath": "D:\\ETU\\Term 8\\net-webapi-ETU\\MusicApp\\MusicApp.BLL\\MusicApp.BLL.csproj"
+              },
+              "D:\\ETU\\Term 8\\net-webapi-ETU\\MusicApp\\MusicApp.Core\\MusicApp.Core.csproj": {
+                "projectPath": "D:\\ETU\\Term 8\\net-webapi-ETU\\MusicApp\\MusicApp.Core\\MusicApp.Core.csproj"
+              },
+              "D:\\ETU\\Term 8\\net-webapi-ETU\\MusicApp\\MusicApp.DAL\\MusicApp.DAL.csproj": {
+                "projectPath": "D:\\ETU\\Term 8\\net-webapi-ETU\\MusicApp\\MusicApp.DAL\\MusicApp.DAL.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "dependencies": {
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[9.0.0, )"
+            },
+            "AutoMapper.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
+            "FluentValidation": {
+              "target": "Package",
+              "version": "[8.6.2, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "target": "Package",
+              "version": "[3.1.3, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools.DotNet": {
+              "target": "Package",
+              "version": "[2.0.3, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[5.3.1, )"
+            },
+            "Swashbuckle.AspNetCore.Swagger": {
+              "target": "Package",
+              "version": "[5.3.1, )"
+            },
+            "Swashbuckle.AspNetCore.SwaggerUI": {
+              "target": "Package",
+              "version": "[5.3.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.201\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\ETU\\Term 8\\net-webapi-ETU\\MusicApp\\MusicApp.BLL\\MusicApp.BLL.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\ETU\\Term 8\\net-webapi-ETU\\MusicApp\\MusicApp.BLL\\MusicApp.BLL.csproj",
+        "projectName": "MusicApp.BLL",
+        "projectPath": "D:\\ETU\\Term 8\\net-webapi-ETU\\MusicApp\\MusicApp.BLL\\MusicApp.BLL.csproj",
+        "packagesPath": "C:\\Users\\squee\\.nuget\\packages\\",
+        "outputPath": "D:\\ETU\\Term 8\\net-webapi-ETU\\MusicApp\\MusicApp.BLL\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\squee\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "projectReferences": {
+              "D:\\ETU\\Term 8\\net-webapi-ETU\\MusicApp\\MusicApp.Core\\MusicApp.Core.csproj": {
+                "projectPath": "D:\\ETU\\Term 8\\net-webapi-ETU\\MusicApp\\MusicApp.Core\\MusicApp.Core.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.201\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\ETU\\Term 8\\net-webapi-ETU\\MusicApp\\MusicApp.Core\\MusicApp.Core.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\ETU\\Term 8\\net-webapi-ETU\\MusicApp\\MusicApp.Core\\MusicApp.Core.csproj",
+        "projectName": "MusicApp.Core",
+        "projectPath": "D:\\ETU\\Term 8\\net-webapi-ETU\\MusicApp\\MusicApp.Core\\MusicApp.Core.csproj",
+        "packagesPath": "C:\\Users\\squee\\.nuget\\packages\\",
+        "outputPath": "D:\\ETU\\Term 8\\net-webapi-ETU\\MusicApp\\MusicApp.Core\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\squee\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.201\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\ETU\\Term 8\\net-webapi-ETU\\MusicApp\\MusicApp.DAL\\MusicApp.DAL.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\ETU\\Term 8\\net-webapi-ETU\\MusicApp\\MusicApp.DAL\\MusicApp.DAL.csproj",
+        "projectName": "MusicApp.DAL",
+        "projectPath": "D:\\ETU\\Term 8\\net-webapi-ETU\\MusicApp\\MusicApp.DAL\\MusicApp.DAL.csproj",
+        "packagesPath": "C:\\Users\\squee\\.nuget\\packages\\",
+        "outputPath": "D:\\ETU\\Term 8\\net-webapi-ETU\\MusicApp\\MusicApp.DAL\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\squee\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "projectReferences": {
+              "D:\\ETU\\Term 8\\net-webapi-ETU\\MusicApp\\MusicApp.Core\\MusicApp.Core.csproj": {
+                "projectPath": "D:\\ETU\\Term 8\\net-webapi-ETU\\MusicApp\\MusicApp.Core\\MusicApp.Core.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "dependencies": {
+            "EntityFramework": {
+              "target": "Package",
+              "version": "[6.4.0, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[3.1.3, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "target": "Package",
+              "version": "[3.1.3, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[3.1.3, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "target": "Package",
+              "version": "[3.1.3, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools.DotNet": {
+              "target": "Package",
+              "version": "[2.0.3, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.201\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
