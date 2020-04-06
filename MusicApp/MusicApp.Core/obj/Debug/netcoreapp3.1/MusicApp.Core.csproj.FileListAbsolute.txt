@@ -1,0 +1,9 @@
+D:\ETU\Term 8\net-webapi-ETU\MusicApp\MusicApp.Core\bin\Debug\netcoreapp3.1\MusicApp.Core.deps.json
+D:\ETU\Term 8\net-webapi-ETU\MusicApp\MusicApp.Core\bin\Debug\netcoreapp3.1\MusicApp.Core.dll
+D:\ETU\Term 8\net-webapi-ETU\MusicApp\MusicApp.Core\bin\Debug\netcoreapp3.1\MusicApp.Core.pdb
+D:\ETU\Term 8\net-webapi-ETU\MusicApp\MusicApp.Core\obj\Debug\netcoreapp3.1\MusicApp.Core.csprojAssemblyReference.cache
+D:\ETU\Term 8\net-webapi-ETU\MusicApp\MusicApp.Core\obj\Debug\netcoreapp3.1\MusicApp.Core.csproj.CoreCompileInputs.cache
+D:\ETU\Term 8\net-webapi-ETU\MusicApp\MusicApp.Core\obj\Debug\netcoreapp3.1\MusicApp.Core.AssemblyInfoInputs.cache
+D:\ETU\Term 8\net-webapi-ETU\MusicApp\MusicApp.Core\obj\Debug\netcoreapp3.1\MusicApp.Core.AssemblyInfo.cs
+D:\ETU\Term 8\net-webapi-ETU\MusicApp\MusicApp.Core\obj\Debug\netcoreapp3.1\MusicApp.Core.dll
+D:\ETU\Term 8\net-webapi-ETU\MusicApp\MusicApp.Core\obj\Debug\netcoreapp3.1\MusicApp.Core.pdb

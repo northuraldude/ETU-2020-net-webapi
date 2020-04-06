@@ -1,0 +1,15 @@
+D:\ETU\Term 8\net-webapi-ETU\MusicApp\MusicApp.DAL\bin\Debug\netcoreapp3.1\MusicApp.DAL.deps.json
+D:\ETU\Term 8\net-webapi-ETU\MusicApp\MusicApp.DAL\bin\Debug\netcoreapp3.1\MusicApp.DAL.runtimeconfig.json
+D:\ETU\Term 8\net-webapi-ETU\MusicApp\MusicApp.DAL\bin\Debug\netcoreapp3.1\MusicApp.DAL.runtimeconfig.dev.json
+D:\ETU\Term 8\net-webapi-ETU\MusicApp\MusicApp.DAL\bin\Debug\netcoreapp3.1\MusicApp.DAL.dll
+D:\ETU\Term 8\net-webapi-ETU\MusicApp\MusicApp.DAL\bin\Debug\netcoreapp3.1\MusicApp.DAL.pdb
+D:\ETU\Term 8\net-webapi-ETU\MusicApp\MusicApp.DAL\bin\Debug\netcoreapp3.1\MusicApp.Core.dll
+D:\ETU\Term 8\net-webapi-ETU\MusicApp\MusicApp.DAL\bin\Debug\netcoreapp3.1\MusicApp.Core.pdb
+D:\ETU\Term 8\net-webapi-ETU\MusicApp\MusicApp.DAL\obj\Debug\netcoreapp3.1\MusicApp.DAL.csprojAssemblyReference.cache
+D:\ETU\Term 8\net-webapi-ETU\MusicApp\MusicApp.DAL\obj\Debug\netcoreapp3.1\MusicApp.DAL.csproj.CoreCompileInputs.cache
+D:\ETU\Term 8\net-webapi-ETU\MusicApp\MusicApp.DAL\obj\Debug\netcoreapp3.1\MusicApp.DAL.AssemblyInfoInputs.cache
+D:\ETU\Term 8\net-webapi-ETU\MusicApp\MusicApp.DAL\obj\Debug\netcoreapp3.1\MusicApp.DAL.AssemblyInfo.cs
+D:\ETU\Term 8\net-webapi-ETU\MusicApp\MusicApp.DAL\obj\Debug\netcoreapp3.1\MusicApp.DAL.csproj.CopyComplete
+D:\ETU\Term 8\net-webapi-ETU\MusicApp\MusicApp.DAL\obj\Debug\netcoreapp3.1\MusicApp.DAL.dll
+D:\ETU\Term 8\net-webapi-ETU\MusicApp\MusicApp.DAL\obj\Debug\netcoreapp3.1\MusicApp.DAL.pdb
+D:\ETU\Term 8\net-webapi-ETU\MusicApp\MusicApp.DAL\obj\Debug\netcoreapp3.1\MusicApp.DAL.genruntimeconfig.cache
