@@ -1,5 +1,5 @@
 # net-webapi-ETU
-ETU 2020: ASP.NET Core 3.x WebAPI Application "Music Library"
+ETU 2020: ASP.NET Core 3.1 WebAPI Application "Music Library"
 
 Author: Evgeny Belousov
 
