@@ -10,10 +10,10 @@ namespace MusicApp.DAL.Repositories
     {
         public ArtistRepository(MusicAppDbContext context) : base(context) { }
         
-        public Task<Artist> GetWithMusicsByIdAsync(int id)
+        public async Task<Artist> GetWithMusicsByIdAsync(int id)
         {
-            return MyMusicDbContext.Artists.Include(a => a.Musics)
-                                           .SingleOrDefaultAsync(a => a.Id == id);
+            return await MyMusicDbContext.Artists.Include(a => a.Musics)
+                                                 .SingleOrDefaultAsync(a => a.Id == id);
         }
         
         public async Task<IEnumerable<Artist>> GetAllWithMusicsAsync()
@@ -22,9 +22,6 @@ namespace MusicApp.DAL.Repositories
                                                  .ToListAsync();
         }
 
-        private MusicAppDbContext MyMusicDbContext
-        {
-            get { return Context as MusicAppDbContext; }
-        }
+        private MusicAppDbContext MyMusicDbContext => Context as MusicAppDbContext;
     }
 }

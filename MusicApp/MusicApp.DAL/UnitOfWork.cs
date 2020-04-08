@@ -13,12 +13,12 @@ namespace MusicApp.DAL
 
         public UnitOfWork(MusicAppDbContext context)
         {
-            this._context = context;
+            _context = context;
         }
 
-        public IMusicRepository Musics => _musicRepository = _musicRepository ?? new MusicRepository(_context);
+        public IMusicRepository Musics => _musicRepository ??= new MusicRepository(_context);
 
-        public IArtistRepository Artists => _artistRepository = _artistRepository ?? new ArtistRepository(_context);
+        public IArtistRepository Artists => _artistRepository ??= new ArtistRepository(_context);
 
         public async Task<int> CommitAsync()
         {

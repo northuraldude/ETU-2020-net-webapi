@@ -8,12 +8,10 @@ namespace MusicApp.API.Mapping
     {
         public MappingProfile()
         {
-            CreateMap<Music, MusicResource>();
-            CreateMap<Artist, ArtistResource>();
+            CreateMap<Music, MusicResource>().ReverseMap();
+            CreateMap<Artist, ArtistResource>().ReverseMap();
             
-            CreateMap<MusicResource, Music>();
             CreateMap<SaveMusicResource, Music>();
-            CreateMap<ArtistResource, Artist>();
             CreateMap<SaveArtistResource, Artist>();
         }
     }

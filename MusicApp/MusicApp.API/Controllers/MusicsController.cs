@@ -18,8 +18,8 @@ namespace MusicApp.API.Controllers
         
         public MusicsController(IMusicService musicService, IMapper mapper)
         {
-            this._mapper = mapper;
-            this._musicService = musicService;
+            _mapper = mapper;
+            _musicService = musicService;
         }
 
         [HttpGet("{id}")]
@@ -31,25 +31,24 @@ namespace MusicApp.API.Controllers
             return Ok(musicResource);
         }
         
-        [HttpGet("")]
+        [HttpGet]
         public async Task<ActionResult<IEnumerable<MusicResource>>> GetAllMusics()
         {
             var musics = await _musicService.GetAllWithArtist();
-            var musicResources = _mapper.Map<IEnumerable<Music>,
-                                                                       IEnumerable<MusicResource>>(musics);
+            var musicResources = _mapper.Map<IEnumerable<Music>, IEnumerable<MusicResource>>(musics);
 
             return Ok(musicResources);
         }
         
         
-        [HttpPost("")]
+        [HttpPost]
         public async Task<ActionResult<MusicResource>> CreateMusic([FromBody] SaveMusicResource saveMusicResource)
         {
             var validator = new SaveMusicResourceValidator();
             var validationResult = await validator.ValidateAsync(saveMusicResource);
 
             if (!validationResult.IsValid)
-                return BadRequest(validationResult.Errors); // this needs refining, but for demo it is ok
+                return BadRequest(validationResult.Errors);
     
             var musicToCreate = _mapper.Map<SaveMusicResource, Music>(saveMusicResource);
             var newMusic = await _musicService.CreateMusic(musicToCreate);
@@ -67,7 +66,7 @@ namespace MusicApp.API.Controllers
             
             var requestIsInvalid = id == 0 || !validationResult.IsValid;
             if (requestIsInvalid)
-                return BadRequest(validationResult.Errors); // this needs refining, but for demo it is ok
+                return BadRequest(validationResult.Errors);
     
             var musicToBeUpdate = await _musicService.GetMusicById(id);
             if (musicToBeUpdate == null)

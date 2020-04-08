@@ -7,11 +7,12 @@ namespace MusicApp.API.Validators
     {
         public SaveMusicResourceValidator()
         {
-            RuleFor(m => m.Name).NotEmpty()
-                                                            .MaximumLength(50);
+            const int maxLength = 50;
+            const string errorMsg = "'Artist Id' must be greater than 0.";
             
-            RuleFor(m => m.ArtistId).NotEmpty()
-                                                                .WithMessage("'Artist Id' must be greater than 0.");
+            RuleFor(m => m.Name).NotEmpty().MaximumLength(maxLength);
+            
+            RuleFor(m => m.ArtistId).NotEmpty().WithMessage(errorMsg);
         }
     }
 }

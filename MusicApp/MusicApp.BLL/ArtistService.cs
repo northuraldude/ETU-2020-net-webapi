@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Threading.Tasks;
 using MusicApp.Core;
 using MusicApp.Core.Models;
@@ -12,7 +13,7 @@ namespace MusicApp.BLL
         
         public ArtistService(IUnitOfWork unitOfWork)
         {
-            this._unitOfWork = unitOfWork;
+            _unitOfWork = unitOfWork;
         }
 
         public async Task<Artist> CreateArtist(Artist newArtist)
@@ -35,8 +36,9 @@ namespace MusicApp.BLL
 
         public async Task UpdateArtist(Artist artistToBeUpdated, Artist artist)
         {
-            artistToBeUpdated.Name = artist.Name;
-            
+            if (artist.Name != null)
+                artistToBeUpdated.Name = artist.Name;
+
             await _unitOfWork.CommitAsync();
         }
         

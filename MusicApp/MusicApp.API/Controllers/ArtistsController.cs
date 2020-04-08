@@ -18,16 +18,15 @@ namespace MusicApp.API.Controllers
         
         public ArtistsController(IArtistService artistService, IMapper mapper)
         {
-            this._mapper = mapper;
-            this._artistService = artistService;
+            _mapper = mapper;
+            _artistService = artistService;
         }
 
-        [HttpGet("")]
+        [HttpGet]
         public async Task<ActionResult<IEnumerable<ArtistResource>>> GetAllArtists()
         {
             var artists = await _artistService.GetAllArtists();
-            var artistResources = _mapper.Map<IEnumerable<Artist>, 
-                                                                       IEnumerable<ArtistResource>>(artists);
+            var artistResources = _mapper.Map<IEnumerable<Artist>, IEnumerable<ArtistResource>>(artists);
 
             return Ok(artistResources);
         }
@@ -41,14 +40,14 @@ namespace MusicApp.API.Controllers
             return Ok(artistResource);
         }
 
-        [HttpPost("")]
+        [HttpPost]
         public async Task<ActionResult<ArtistResource>> CreateArtist([FromBody] SaveArtistResource saveArtistResource)
         {
             var validator = new SaveArtistResourceValidator();
             
             var validationResult = await validator.ValidateAsync(saveArtistResource);
             if (!validationResult.IsValid)
-                return BadRequest(validationResult.Errors); // this needs refining, but for demo it is ok
+                return BadRequest(validationResult.Errors);
 
             var artistToCreate = _mapper.Map<SaveArtistResource, Artist>(saveArtistResource);
             var newArtist = await _artistService.CreateArtist(artistToCreate);
@@ -65,7 +64,7 @@ namespace MusicApp.API.Controllers
             
             var validationResult = await validator.ValidateAsync(saveArtistResource);
             if (!validationResult.IsValid)
-                return BadRequest(validationResult.Errors); // this needs refining, but for demo it is ok
+                return BadRequest(validationResult.Errors);
 
             var artistToBeUpdated = await _artistService.GetArtistById(id);
             if (artistToBeUpdated == null)

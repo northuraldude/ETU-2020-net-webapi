@@ -12,7 +12,7 @@ namespace MusicApp.BLL
         
         public MusicService(IUnitOfWork unitOfWork)
         {
-            this._unitOfWork = unitOfWork;
+            _unitOfWork = unitOfWork;
         }
 
         public async Task<Music> CreateMusic(Music newMusic)
@@ -40,8 +40,11 @@ namespace MusicApp.BLL
 
         public async Task UpdateMusic(Music musicToBeUpdated, Music music)
         {
-            musicToBeUpdated.Name = music.Name;
-            musicToBeUpdated.ArtistId = music.ArtistId;
+            if (music.Name != null)
+            {
+                musicToBeUpdated.Name = music.Name;
+                musicToBeUpdated.ArtistId = music.ArtistId;
+            }
             
             await _unitOfWork.CommitAsync();
         }

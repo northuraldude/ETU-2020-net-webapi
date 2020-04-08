@@ -31,9 +31,6 @@ namespace MusicApp.DAL.Repositories
                                                 .ToListAsync();
         }
         
-        private MusicAppDbContext MyMusicDbContext
-        {
-            get { return Context as MusicAppDbContext; }
-        }
+        private MusicAppDbContext MyMusicDbContext => Context as MusicAppDbContext;
     }
 }

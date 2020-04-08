@@ -7,8 +7,9 @@ namespace MusicApp.API.Validators
     {
         public SaveArtistResourceValidator()
         {
-            RuleFor(a => a.Name).NotEmpty()
-                                                           .MaximumLength(50);
+            const int maxLength = 50;
+            
+            RuleFor(a => a.Name).NotEmpty().MaximumLength(maxLength);
         }
     }
 }
