@@ -18,11 +18,12 @@ namespace MusicApp.BLL
 
         public async Task<Artist> CreateArtist(Artist newArtist)
         {
-            if (IsExist(newArtist))
-            {
-                await _unitOfWork.Artists.AddAsync(newArtist);
-                await _unitOfWork.CommitAsync();
-            }
+            if (newArtist is null)
+                throw new NullReferenceException();
+            
+            await _unitOfWork.Artists.AddAsync(newArtist);
+            await _unitOfWork.CommitAsync();
+            
             return newArtist;
         }
         
@@ -38,10 +39,12 @@ namespace MusicApp.BLL
 
         public async Task UpdateArtist(int id, Artist artist)
         {
-            var artistToBeUpdated = await _unitOfWork.Artists.GetWithMusicsByIdAsync(id);
-            if (IsExist(artistToBeUpdated))
-                artistToBeUpdated.Name = artist.Name;
-
+            if (!await _unitOfWork.Artists.IsExists(id))
+                throw new NullReferenceException();
+            
+            var artistToBeUpdated = await GetArtistById(id);
+            artistToBeUpdated.Name = artist.Name;
+            
             await _unitOfWork.CommitAsync();
         }
         
@@ -50,11 +53,6 @@ namespace MusicApp.BLL
             _unitOfWork.Artists.Remove(artist);
             
             await _unitOfWork.CommitAsync();
-        }
-
-        private bool IsExist(Artist artist)
-        {
-            return artist != null;
         }
     }
 }

@@ -31,6 +31,11 @@ namespace MusicApp.DAL.Repositories
                                                 .ToListAsync();
         }
         
+        public async Task<bool> IsExists(int id)
+        {
+            return await GetByIdAsync(id) is {};
+        }
+        
         private MusicAppDbContext MyMusicDbContext => Context as MusicAppDbContext;
     }
 }

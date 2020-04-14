@@ -8,5 +8,6 @@ namespace MusicApp.Core.Repositories
     {
         Task<Artist> GetWithMusicsByIdAsync(int id);
         Task<IEnumerable<Artist>> GetAllWithMusicsAsync();
+        Task<bool> IsExists(int id);
     }
 }

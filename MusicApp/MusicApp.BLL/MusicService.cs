@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Threading.Tasks;
 using MusicApp.Core;
 using MusicApp.Core.Models;
@@ -17,12 +18,12 @@ namespace MusicApp.BLL
 
         public async Task<Music> CreateMusic(Music newMusic)
         {
-            if (IsExist(newMusic))
-            {
-                await _unitOfWork.Musics.AddAsync(newMusic);
-                await _unitOfWork.CommitAsync();
-            }
+            if (newMusic is null)
+                throw new NullReferenceException();
             
+            await _unitOfWork.Musics.AddAsync(newMusic);
+            await _unitOfWork.CommitAsync();
+
             return newMusic;
         }
 
@@ -43,13 +44,14 @@ namespace MusicApp.BLL
 
         public async Task UpdateMusic(int id, Music music)
         {
-            var musicToBeUpdated = await _unitOfWork.Musics.GetWithArtistByIdAsync(id);
-            if (IsExist(musicToBeUpdated))
-            {
-                musicToBeUpdated.Name = music.Name;
-                musicToBeUpdated.ArtistId = music.ArtistId;
-            }
+            if (!await _unitOfWork.Musics.IsExists(id))
+                throw new NullReferenceException();
             
+            var musicToBeUpdated = await GetMusicById(id);
+            
+            musicToBeUpdated.Name = music.Name;
+            musicToBeUpdated.ArtistId = music.ArtistId;
+
             await _unitOfWork.CommitAsync();
         }
         
@@ -58,11 +60,6 @@ namespace MusicApp.BLL
             _unitOfWork.Musics.Remove(music);
             
             await _unitOfWork.CommitAsync();
-        }
-        
-        private bool IsExist(Music music)
-        {
-            return music != null;
         }
     }
 }
