@@ -1,9 +1,9 @@
 ﻿using System.Collections.Generic;
 using System.Threading.Tasks;
 using AutoMapper;
+using FluentValidation;
 using Microsoft.AspNetCore.Mvc;
 using MusicApp.API.Resources;
-using MusicApp.API.Validators;
 using MusicApp.Core.Models;
 using MusicApp.Core.Services;
 
@@ -15,11 +15,13 @@ namespace MusicApp.API.Controllers
     {
         private readonly IArtistService _artistService;
         private readonly IMapper _mapper;
+        private readonly AbstractValidator<SaveArtistResource> _validator;
         
-        public ArtistsController(IArtistService artistService, IMapper mapper)
+        public ArtistsController(IArtistService artistService, IMapper mapper, AbstractValidator<SaveArtistResource> validator)
         {
             _mapper = mapper;
             _artistService = artistService;
+            _validator = validator;
         }
 
         [HttpGet]
@@ -43,16 +45,13 @@ namespace MusicApp.API.Controllers
         [HttpPost]
         public async Task<ActionResult<ArtistResource>> CreateArtist([FromBody] SaveArtistResource saveArtistResource)
         {
-            var validator = new SaveArtistResourceValidator();
-            
-            var validationResult = await validator.ValidateAsync(saveArtistResource);
+            var validationResult = await _validator.ValidateAsync(saveArtistResource);
             if (!validationResult.IsValid)
                 return BadRequest(validationResult.Errors);
 
             var artistToCreate = _mapper.Map<SaveArtistResource, Artist>(saveArtistResource);
             var newArtist = await _artistService.CreateArtist(artistToCreate);
-            var artist = await _artistService.GetArtistById(newArtist.Id);
-            var artistResource = _mapper.Map<Artist, ArtistResource>(artist);
+            var artistResource = _mapper.Map<Artist, ArtistResource>(newArtist);
 
             return Ok(artistResource);
         }
@@ -60,19 +59,13 @@ namespace MusicApp.API.Controllers
         [HttpPut("{id}")]
         public async Task<ActionResult<ArtistResource>> UpdateArtist(int id, [FromBody] SaveArtistResource saveArtistResource)
         {
-            var validator = new SaveArtistResourceValidator();
-            
-            var validationResult = await validator.ValidateAsync(saveArtistResource);
+            var validationResult = await _validator.ValidateAsync(saveArtistResource);
             if (!validationResult.IsValid)
                 return BadRequest(validationResult.Errors);
-
-            var artistToBeUpdated = await _artistService.GetArtistById(id);
-            if (artistToBeUpdated == null)
-                return NotFound();
-
+            
             var artist = _mapper.Map<SaveArtistResource, Artist>(saveArtistResource);
 
-            await _artistService.UpdateArtist(artistToBeUpdated, artist);
+            await _artistService.UpdateArtist(id, artist);
 
             var updatedArtist = await _artistService.GetArtistById(id);
             var updatedArtistResource = _mapper.Map<Artist, ArtistResource>(updatedArtist);

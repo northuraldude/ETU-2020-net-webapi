@@ -39,8 +39,7 @@ namespace MusicApp.API.Controllers
 
             return Ok(musicResources);
         }
-        
-        
+
         [HttpPost]
         public async Task<ActionResult<MusicResource>> CreateMusic([FromBody] SaveMusicResource saveMusicResource)
         {
@@ -52,8 +51,7 @@ namespace MusicApp.API.Controllers
     
             var musicToCreate = _mapper.Map<SaveMusicResource, Music>(saveMusicResource);
             var newMusic = await _musicService.CreateMusic(musicToCreate);
-            var music = await _musicService.GetMusicById(newMusic.Id);
-            var musicResource = _mapper.Map<Music, MusicResource>(music);
+            var musicResource = _mapper.Map<Music, MusicResource>(newMusic);
 
             return Ok(musicResource);
         }
@@ -67,14 +65,10 @@ namespace MusicApp.API.Controllers
             var requestIsInvalid = id == 0 || !validationResult.IsValid;
             if (requestIsInvalid)
                 return BadRequest(validationResult.Errors);
-    
-            var musicToBeUpdate = await _musicService.GetMusicById(id);
-            if (musicToBeUpdate == null)
-                return NotFound();
-
+            
             var music = _mapper.Map<SaveMusicResource, Music>(saveMusicResource);
 
-            await _musicService.UpdateMusic(musicToBeUpdate, music);
+            await _musicService.UpdateMusic(id, music);
 
             var updatedMusic = await _musicService.GetMusicById(id);
             var updatedMusicResource = _mapper.Map<Music, MusicResource>(updatedMusic);

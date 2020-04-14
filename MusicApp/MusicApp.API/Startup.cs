@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using AutoMapper;
+using FluentValidation;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -13,6 +14,8 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
+using MusicApp.API.Resources;
+using MusicApp.API.Validators;
 using MusicApp.BLL;
 using MusicApp.Core;
 using MusicApp.Core.Services;
@@ -42,6 +45,9 @@ namespace MusicApp.API
             
             services.AddTransient<IMusicService, MusicService>();
             services.AddTransient<IArtistService, ArtistService>();
+
+            services.AddScoped<AbstractValidator<SaveMusicResource>, SaveMusicResourceValidator>();
+            services.AddScoped<AbstractValidator<SaveArtistResource>, SaveArtistResourceValidator>();
             
             services.AddSwaggerGen(options =>
             {

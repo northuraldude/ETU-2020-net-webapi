@@ -9,7 +9,7 @@ namespace MusicApp.Core.Services
         Task<Artist> CreateArtist(Artist newArtist);
         Task<Artist> GetArtistById(int id);
         Task<IEnumerable<Artist>> GetAllArtists();
-        Task UpdateArtist(Artist artistToBeUpdated, Artist artist);
+        Task UpdateArtist(int id, Artist artist);
         Task DeleteArtist(Artist artist);
     }
 }

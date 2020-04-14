@@ -8,6 +8,8 @@ namespace MusicApp.DAL.Configurations
     {
         public void Configure(EntityTypeBuilder<Artist> builder)
         {
+            const int maxLength = 50;
+            
             builder.HasKey(a => a.Id);
 
             builder.Property(m => m.Id)
@@ -15,7 +17,7 @@ namespace MusicApp.DAL.Configurations
                 
             builder.Property(m => m.Name)
                    .IsRequired()
-                   .HasMaxLength(50);
+                   .HasMaxLength(maxLength);
 
             builder.ToTable("Artists");
         }

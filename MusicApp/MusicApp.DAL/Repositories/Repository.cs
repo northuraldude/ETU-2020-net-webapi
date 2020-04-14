@@ -8,11 +8,11 @@ using MusicApp.Core.Repositories;
 
 namespace MusicApp.DAL.Repositories
 {
-    public class Repository<TEntity> : IRepository<TEntity> where TEntity : class
+    public abstract class Repository<TEntity> : IRepository<TEntity> where TEntity : class
     {
         protected readonly DbContext Context;
-        
-        public Repository(DbContext context)
+
+        protected Repository(DbContext context)
         {
             Context = context;
         }

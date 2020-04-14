@@ -10,7 +10,7 @@ namespace MusicApp.Core.Services
         Task<Music> GetMusicById(int id);
         Task<IEnumerable<Music>> GetAllWithArtist();
         Task<IEnumerable<Music>> GetMusicsByArtistId(int artistId);
-        Task UpdateMusic(Music musicToBeUpdated, Music music);
+        Task UpdateMusic(int id, Music music);
         Task DeleteMusic(Music music);
     }
 }
