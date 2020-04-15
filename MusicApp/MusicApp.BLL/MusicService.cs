@@ -60,7 +60,7 @@ namespace MusicApp.BLL
         
         public async Task DeleteMusic(Music music)
         {
-            if (!await _unitOfWork.Artists.IsExists(music.Id))
+            if (!(await _unitOfWork.Musics.IsExists(music.Id)))
                 throw new NullReferenceException();
             
             _unitOfWork.Musics.Remove(music);
