@@ -1,6 +1,5 @@
 using System;
 using System.Collections.Generic;
-using System.IO;
 using System.Threading.Tasks;
 using Moq;
 using MusicApp.Core;
@@ -11,7 +10,7 @@ using NUnit.Framework;
 namespace MusicApp.BLL.Tests
 {
     [TestFixture]
-    public class DeleteMusicTest
+    public class DeleteMusicTests
     {
         private static (Mock<IUnitOfWork> unitOfWork, Mock<IMusicRepository> musicRepo, Dictionary<int, Music> dbCollectionMusic) GetMocks()
         {
