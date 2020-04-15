@@ -1,4 +1,6 @@
+using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Threading.Tasks;
 using Moq;
 using MusicApp.Core;
@@ -9,19 +11,23 @@ using NUnit.Framework;
 namespace MusicApp.BLL.Tests
 {
     [TestFixture]
-    public class ArtistServiceTest
+    public class UpdateArtistTests
     {
         private static (Mock<IUnitOfWork> unitOfWork, Mock<IArtistRepository> artistRepo, Dictionary<int, Artist> dbCollection) GetMocks()
         {
             var unitOfWork = new Mock<IUnitOfWork>(MockBehavior.Strict);
             var artistRepo = new Mock<IArtistRepository>(MockBehavior.Strict);
-
             var dbCollection = new Dictionary<int, Artist>
             {
+                [26] = new Artist
+                {
+                    Id = 26,
+                    Name = "Delete Group"
+                },
                 [27] = new Artist
                 {
                     Id = 27,
-                    Name = "Old Group"
+                    Name = "Group"
                 }
             };
 
@@ -35,57 +41,53 @@ namespace MusicApp.BLL.Tests
 
             return (unitOfWork, artistRepo, dbCollection);
         }
-
-        [Test]
-        public async Task CreateArtist_Success()
-        {
-            var (unitOfWork, artistRepo, dbCollection) = GetMocks();
-            artistRepo.Setup(e => e.AddAsync(It.IsAny<Artist>()))
-                      .Callback((Artist newArtist) => { dbCollection.Add(28, newArtist); })
-                      .Returns((Artist _) => Task.CompletedTask);
-            
-            var service = new ArtistService(unitOfWork.Object);
-            
-            var artist = new Artist
-            {
-                Name = "New Group"
-            };
-
-            await service.CreateArtist(artist);
-
-            Assert.IsTrue(dbCollection.ContainsKey(28));
-        }
         
         [Test]
-        public async Task UpdateArtist_Success()
+        public async Task UpdateArtist_FullInfo_Success()
         {
+            // Arrange
             var (unitOfWork, artistRepo, dbCollection)  = GetMocks();
             var service = new ArtistService(unitOfWork.Object);
-            
             var artist = new Artist
             {
                 Name = "New Group"
             };
         
+            // Act
             await service.UpdateArtist(27, artist);
             
+            // Assert
             Assert.AreEqual((await unitOfWork.Object.Artists.GetByIdAsync(27)).Name, artist.Name);
         }
         
         [Test]
-        public async Task UpdateArtist_EmptyName_NotUpdated()
+        public void UpdateArtist_EmptyName_InvalidDataException()
         {
+            // Arrange
             var (unitOfWork, artistRepo, dbCollection)  = GetMocks();
             var service = new ArtistService(unitOfWork.Object);
-
             var artist = new Artist()
             {
                 Name = ""
             };
-
-            await service.UpdateArtist(27, artist);
+            
+            // Act + Assert
+            Assert.ThrowsAsync<InvalidDataException>(async () => await service.UpdateArtist(27, artist));
+        }
         
-            Assert.IsNotNull((await unitOfWork.Object.Artists.GetByIdAsync(27)).Name);
+        [Test]
+        public void UpdateArtist_NoItemForUpdate_NullReferenceException()
+        {
+            // Arrange
+            var (unitOfWork, artistRepo, dbCollection)  = GetMocks();
+            var service = new ArtistService(unitOfWork.Object);
+            var artist = new Artist()
+            {
+                Name = "Update Group"
+            };
+            
+            // Act + Assert
+            Assert.ThrowsAsync<NullReferenceException>(async () => await service.UpdateArtist(0, artist));
         }
     }
 }

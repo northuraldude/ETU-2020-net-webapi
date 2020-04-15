@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Threading.Tasks;
 using MusicApp.Core;
 using MusicApp.Core.Models;
@@ -42,6 +43,9 @@ namespace MusicApp.BLL
             if (!await _unitOfWork.Artists.IsExists(id))
                 throw new NullReferenceException();
             
+            if (artist.Name.Length == 0 || artist.Name.Length > 50)
+                throw new InvalidDataException();
+
             var artistToBeUpdated = await GetArtistById(id);
             artistToBeUpdated.Name = artist.Name;
             
@@ -50,6 +54,9 @@ namespace MusicApp.BLL
         
         public async Task DeleteArtist(Artist artist)
         {
+            if (!await _unitOfWork.Artists.IsExists(artist.Id))
+                throw new NullReferenceException();
+            
             _unitOfWork.Artists.Remove(artist);
             
             await _unitOfWork.CommitAsync();
